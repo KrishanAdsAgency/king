@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KING MASTER</title>
-
-<meta name="theme-color" content="#100505">
-<meta name="description" content="Join KING MASTER on Telegram.">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="KING MASTER Official Telegram Channel">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -18,7 +17,7 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     min-height: 100%;
 }
 
@@ -29,44 +28,37 @@ body {
     align-items: center;
     padding: 18px;
     font-family: 'Poppins', sans-serif;
-    color: #ffffff;
+    color: #fff;
     background:
-        radial-gradient(ellipse at top, rgba(220, 20, 20, 0.22), transparent 65%),
-        linear-gradient(145deg, #190606, #080808 65%, #200707);
+        radial-gradient(ellipse at top, rgba(180,0,0,.20), transparent 65%),
+        #080808;
 }
 
 .card {
     width: 100%;
     max-width: 400px;
-    padding: 26px 22px;
+    padding: 27px 22px 23px;
     text-align: center;
-    background: linear-gradient(145deg, #200909, #100707 60%, #190606);
-    border: 1px solid rgba(255, 65, 65, 0.55);
+    background: linear-gradient(145deg, #1b0808, #0c0c0c);
+    border: 1px solid rgba(255,55,55,.45);
     border-radius: 25px;
-    box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.75),
-        0 0 30px rgba(220, 20, 20, 0.12);
-    animation: fadeIn 0.7s ease;
+    box-shadow: 0 25px 70px rgba(0,0,0,.8),
+                0 0 30px rgba(220,0,0,.12);
+    animation: fadeIn .7s ease;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(18px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .brand {
     display: inline-block;
-    margin-bottom: 15px;
-    padding: 7px 15px;
-    color: #ffb4b4;
-    background: rgba(255, 40, 40, 0.10);
-    border: 1px solid rgba(255, 70, 70, 0.35);
+    margin-bottom: 14px;
+    padding: 7px 16px;
+    color: #ff7777;
+    background: rgba(255,30,30,.08);
+    border: 1px solid rgba(255,70,70,.35);
     border-radius: 30px;
     font-size: 10px;
     font-weight: 800;
@@ -76,20 +68,20 @@ body {
 .badge {
     margin-bottom: 23px;
     padding: 10px;
-    color: #ffffff;
-    background: linear-gradient(90deg, #4d0808, #8d1111, #4d0808);
-    border: 1px solid rgba(255, 100, 100, 0.4);
+    color: #fff;
+    background: linear-gradient(90deg,#350707,#8d1010,#350707);
+    border: 1px solid rgba(255,100,100,.3);
     border-radius: 12px;
     font-size: 11px;
     font-weight: 800;
-    letter-spacing: 0.7px;
+    letter-spacing: .6px;
 }
 
 .avatar {
     position: relative;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 22px;
+    width: 155px;
+    height: 155px;
+    margin: 0 auto 23px;
 }
 
 .ring {
@@ -98,19 +90,17 @@ body {
     border-radius: 50%;
     background: conic-gradient(
         #ff2525,
-        #ffb000,
-        #b80000,
+        #ffffff,
+        #a00000,
         #ff5555,
         #ff2525
     );
-    animation: spin 5s linear infinite;
-    box-shadow: 0 0 25px rgba(255, 30, 30, 0.35);
+    animation: spin 6s linear infinite;
+    box-shadow: 0 0 25px rgba(255,30,30,.3);
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+    to { transform: rotate(360deg); }
 }
 
 .logo-inner {
@@ -120,12 +110,12 @@ body {
     height: 100%;
     padding: 5px;
     overflow: hidden;
-    border: 4px solid #160505;
+    border: 4px solid #100606;
     border-radius: 50%;
-    background: #100505;
+    background: #000;
 }
 
-.logo-inner video {
+.logo-inner img {
     display: block;
     width: 100%;
     height: 100%;
@@ -135,21 +125,21 @@ body {
 }
 
 .name {
-    margin-bottom: 8px;
-    font-size: 29px;
+    margin-bottom: 9px;
+    color: #fff;
+    font-size: 30px;
     line-height: 1.2;
     font-weight: 800;
     letter-spacing: 1px;
-    color: #ffffff;
-    text-shadow: 0 0 20px rgba(255, 30, 30, 0.35);
+    text-shadow: 0 0 20px rgba(255,30,30,.35);
 }
 
 .subtitle {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     color: #ff6464;
     font-size: 10px;
     font-weight: 800;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.2px;
 }
 
 .chart {
@@ -164,51 +154,21 @@ body {
 .candle {
     width: 9px;
     border-radius: 2px;
-    background: linear-gradient(to top, #b00000, #ff6464);
+    background: linear-gradient(to top,#a00000,#ff6464);
     animation: candleMove 1.5s ease-in-out infinite;
 }
 
-.candle:nth-child(1) {
-    height: 18px;
-}
-
-.candle:nth-child(2) {
-    height: 30px;
-    animation-delay: 0.1s;
-}
-
-.candle:nth-child(3) {
-    height: 23px;
-    animation-delay: 0.2s;
-}
-
-.candle:nth-child(4) {
-    height: 38px;
-    animation-delay: 0.3s;
-}
-
-.candle:nth-child(5) {
-    height: 27px;
-    animation-delay: 0.4s;
-}
-
-.candle:nth-child(6) {
-    height: 34px;
-    animation-delay: 0.5s;
-}
-
-.candle:nth-child(7) {
-    height: 41px;
-    animation-delay: 0.6s;
-}
+.candle:nth-child(1) { height: 18px; }
+.candle:nth-child(2) { height: 30px; animation-delay: .1s; }
+.candle:nth-child(3) { height: 23px; animation-delay: .2s; }
+.candle:nth-child(4) { height: 38px; animation-delay: .3s; }
+.candle:nth-child(5) { height: 27px; animation-delay: .4s; }
+.candle:nth-child(6) { height: 34px; animation-delay: .5s; }
+.candle:nth-child(7) { height: 41px; animation-delay: .6s; }
 
 @keyframes candleMove {
-    0%, 100% {
-        transform: scaleY(1);
-    }
-    50% {
-        transform: scaleY(0.75);
-    }
+    0%,100% { transform: scaleY(1); }
+    50% { transform: scaleY(.75); }
 }
 
 .features {
@@ -221,43 +181,37 @@ body {
 
 .feature {
     padding: 8px 11px;
-    color: #ffc4c4;
-    background: rgba(255, 40, 40, 0.08);
-    border: 1px solid rgba(255, 80, 80, 0.3);
+    color: #ffc5c5;
+    background: rgba(255,40,40,.07);
+    border: 1px solid rgba(255,80,80,.3);
     border-radius: 10px;
     font-size: 9px;
     font-weight: 700;
 }
 
 .cta {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 100%;
     padding: 16px 18px;
-    overflow: hidden;
     border: 0;
     border-radius: 50px;
-    background: linear-gradient(135deg, #ff3333, #c90000, #8b0000);
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    background: linear-gradient(135deg,#ff3535,#cf0000,#850000);
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    font-size: 13px;
     font-weight: 800;
     text-decoration: none;
-    box-shadow: 0 5px 25px rgba(255, 20, 20, 0.28);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    animation: buttonPulse 2.2s ease-in-out infinite;
+    box-shadow: 0 5px 25px rgba(255,20,20,.3);
+    transition: .2s ease;
+    animation: pulse 2.2s ease-in-out infinite;
 }
 
 .cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(255, 20, 20, 0.45);
-}
-
-.cta:active {
-    transform: scale(0.97);
+    box-shadow: 0 8px 30px rgba(255,20,20,.45);
 }
 
 .telegram-icon {
@@ -267,18 +221,14 @@ body {
     flex-shrink: 0;
 }
 
-@keyframes buttonPulse {
-    0%, 100% {
-        box-shadow: 0 5px 20px rgba(255, 20, 20, 0.22);
-    }
-    50% {
-        box-shadow: 0 7px 30px rgba(255, 20, 20, 0.45);
-    }
+@keyframes pulse {
+    0%,100% { box-shadow: 0 5px 20px rgba(255,20,20,.22); }
+    50% { box-shadow: 0 7px 30px rgba(255,20,20,.45); }
 }
 
 .join-text {
     margin-top: 13px;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255,255,255,.55);
     font-size: 10px;
 }
 
@@ -290,37 +240,25 @@ body {
 .divider {
     margin: 20px 0 13px;
     border: 0;
-    border-top: 1px solid rgba(255, 70, 70, 0.2);
+    border-top: 1px solid rgba(255,70,70,.2);
 }
 
 .footer {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255,255,255,.4);
     font-size: 9px;
     line-height: 1.7;
 }
 
-@media (max-width: 360px) {
-    .card {
-        padding: 23px 17px;
-    }
-
-    .name {
-        font-size: 25px;
-    }
-
-    .avatar {
-        width: 135px;
-        height: 135px;
-    }
+@media(max-width:360px) {
+    .card { padding: 23px 17px; }
+    .name { font-size: 25px; }
+    .avatar { width: 135px; height: 135px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
+@media(prefers-reduced-motion:reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
     }
 }
 </style>
@@ -330,9 +268,7 @@ body {
 
 <main class="card">
 
-    <div class="brand">
-        KING MASTER
-    </div>
+    <div class="brand">KING MASTER</div>
 
     <div class="badge">
         👑 KING MASTER • OFFICIAL CHANNEL
@@ -342,18 +278,12 @@ body {
         <div class="ring"></div>
 
         <div class="logo-inner">
-            <video
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                poster=""
-                aria-label="KING MASTER logo video"
+            <img
+                src="king-master-logo.jpg"
+                alt="KING MASTER Logo"
+                width="145"
+                height="145"
             >
-                <source src="1000604516.mp4" type="video/mp4">
-                Your browser does not support HTML video.
-            </video>
         </div>
     </div>
 
@@ -385,14 +315,9 @@ body {
         target="_blank"
         rel="noopener noreferrer"
     >
-        <svg
-            class="telegram-icon"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-        >
+        <svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M21.8 3.2a1.5 1.5 0 0 0-1.6-.3L2.8 9.5c-1.2.5-1.2 1.2-.2 1.5l4.5 1.4 1.7 5.3c.2.6.1.8.7.8.5 0 .7-.2.9-.4l2.2-2.2 4.6 3.4c.8.5 1.4.3 1.6-.8l3-14.2c.2-.8-.2-1.3-.8-1.1ZM9.1 12.1l9.2-5.8c.5-.3.9-.1.5.2l-7.6 7-.3 3.2-1.8-4.6Z"/>
         </svg>
-
         JOIN TELEGRAM CHANNEL
     </a>
 

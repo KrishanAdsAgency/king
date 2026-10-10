@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>KING MASTER</title>
 
-<meta name="theme-color" content="#080808">
+<meta name="theme-color" content="#100505">
+<meta name="description" content="Join KING MASTER on Telegram.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -14,118 +18,309 @@
     box-sizing: border-box;
 }
 
+html {
+    min-height: 100%;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #080808;
-    color: #ffffff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background:
+        radial-gradient(ellipse at top, rgba(220, 20, 20, 0.22), transparent 65%),
+        linear-gradient(145deg, #190606, #080808 65%, #200707);
 }
 
-.container {
+.card {
     width: 100%;
-    max-width: 420px;
+    max-width: 400px;
+    padding: 26px 22px;
     text-align: center;
-    background: linear-gradient(180deg, #1b1b1b, #090909);
-    border: 1px solid #e50914;
-    border-radius: 20px;
-    padding: 35px 24px;
-    box-shadow: 0 0 30px rgba(229, 9, 20, 0.25);
+    background: linear-gradient(145deg, #200909, #100707 60%, #190606);
+    border: 1px solid rgba(255, 65, 65, 0.55);
+    border-radius: 25px;
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.75),
+        0 0 30px rgba(220, 20, 20, 0.12);
+    animation: fadeIn 0.7s ease;
 }
 
-.logo {
-    width: 125px;
-    height: 125px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #ff1722;
-    box-shadow: 0 0 20px rgba(255, 23, 34, 0.45);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.logo video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-h1 {
-    color: #ff1722;
-    font-size: 30px;
-    font-weight: 900;
+.brand {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 7px 15px;
+    color: #ffb4b4;
+    background: rgba(255, 40, 40, 0.10);
+    border: 1px solid rgba(255, 70, 70, 0.35);
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
     letter-spacing: 2px;
-    margin-bottom: 12px;
-}
-
-.subtitle {
-    color: #dddddd;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 25px;
 }
 
 .badge {
-    display: inline-block;
-    background: rgba(229, 9, 20, 0.12);
-    border: 1px solid #e50914;
-    color: #ff343d;
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 12px;
-    font-weight: bold;
+    margin-bottom: 23px;
+    padding: 10px;
+    color: #ffffff;
+    background: linear-gradient(90deg, #4d0808, #8d1111, #4d0808);
+    border: 1px solid rgba(255, 100, 100, 0.4);
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.avatar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 22px;
+}
+
+.ring {
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ff2525,
+        #ffb000,
+        #b80000,
+        #ff5555,
+        #ff2525
+    );
+    animation: spin 5s linear infinite;
+    box-shadow: 0 0 25px rgba(255, 30, 30, 0.35);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    overflow: hidden;
+    border: 4px solid #160505;
+    border-radius: 50%;
+    background: #100505;
+}
+
+.logo-inner video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.name {
+    margin-bottom: 8px;
+    font-size: 29px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 30, 30, 0.35);
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    color: #ff6464;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.chart {
+    height: 42px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
     margin-bottom: 22px;
 }
 
-.join-button {
-    display: block;
-    width: 100%;
-    background: linear-gradient(90deg, #e50914, #ff303a);
-    color: #ffffff;
-    text-decoration: none;
-    padding: 16px;
+.candle {
+    width: 9px;
+    border-radius: 2px;
+    background: linear-gradient(to top, #b00000, #ff6464);
+    animation: candleMove 1.5s ease-in-out infinite;
+}
+
+.candle:nth-child(1) {
+    height: 18px;
+}
+
+.candle:nth-child(2) {
+    height: 30px;
+    animation-delay: 0.1s;
+}
+
+.candle:nth-child(3) {
+    height: 23px;
+    animation-delay: 0.2s;
+}
+
+.candle:nth-child(4) {
+    height: 38px;
+    animation-delay: 0.3s;
+}
+
+.candle:nth-child(5) {
+    height: 27px;
+    animation-delay: 0.4s;
+}
+
+.candle:nth-child(6) {
+    height: 34px;
+    animation-delay: 0.5s;
+}
+
+.candle:nth-child(7) {
+    height: 41px;
+    animation-delay: 0.6s;
+}
+
+@keyframes candleMove {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.75);
+    }
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 23px;
+}
+
+.feature {
+    padding: 8px 11px;
+    color: #ffc4c4;
+    background: rgba(255, 40, 40, 0.08);
+    border: 1px solid rgba(255, 80, 80, 0.3);
     border-radius: 10px;
-    font-size: 17px;
-    font-weight: bold;
-    transition: 0.3s;
-    box-shadow: 0 5px 18px rgba(229, 9, 20, 0.25);
+    font-size: 9px;
+    font-weight: 700;
 }
 
-.join-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(229, 9, 20, 0.4);
-}
-
-.countdown {
-    margin-top: 22px;
-    color: #bbbbbb;
+.cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 18px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff3333, #c90000, #8b0000);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    line-height: 1.7;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 5px 25px rgba(255, 20, 20, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: buttonPulse 2.2s ease-in-out infinite;
 }
 
-#timer {
-    color: #ff1722;
-    font-size: 22px;
-    font-weight: bold;
+.cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255, 20, 20, 0.45);
+}
+
+.cta:active {
+    transform: scale(0.97);
+}
+
+.telegram-icon {
+    width: 21px;
+    height: 21px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        box-shadow: 0 5px 20px rgba(255, 20, 20, 0.22);
+    }
+    50% {
+        box-shadow: 0 7px 30px rgba(255, 20, 20, 0.45);
+    }
+}
+
+.join-text {
+    margin-top: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 10px;
+}
+
+.join-text span {
+    color: #ff6464;
+    font-weight: 800;
+}
+
+.divider {
+    margin: 20px 0 13px;
+    border: 0;
+    border-top: 1px solid rgba(255, 70, 70, 0.2);
 }
 
 .footer {
-    margin-top: 25px;
-    padding-top: 16px;
-    border-top: 1px solid #292929;
-    color: #777777;
-    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 9px;
+    line-height: 1.7;
 }
 
 @media (max-width: 360px) {
-    h1 {
+    .card {
+        padding: 23px 17px;
+    }
+
+    .name {
         font-size: 25px;
     }
 
-    .container {
-        padding: 28px 18px;
+    .avatar {
+        width: 135px;
+        height: 135px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
     }
 }
 </style>
@@ -133,57 +328,86 @@ h1 {
 
 <body>
 
-<div class="container">
+<main class="card">
 
-    <div class="logo">
-        <video autoplay muted loop playsinline preload="auto">
-            <source src="1000604516.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="badge">WELCOME TO KING MASTER</div>
-
-    <h1>KING MASTER</h1>
-
-    <p class="subtitle">
-        Join our official Telegram channel for the latest updates.
-    </p>
-
-    <a
-        class="join-button"
-        href="https://t.me/+jBztwPs2Vz45ZDY9"
-        id="joinButton"
-    >
-        JOIN TELEGRAM
-    </a>
-
-    <div class="countdown">
-        Redirecting to Telegram in<br>
-        <span id="timer">30</span> seconds
-    </div>
-
-    <div class="footer">
+    <div class="brand">
         KING MASTER
     </div>
 
-</div>
+    <div class="badge">
+        👑 KING MASTER • OFFICIAL CHANNEL
+    </div>
 
-<script>
-const telegramLink = "https://t.me/+jBztwPs2Vz45ZDY9";
-let seconds = 30;
+    <div class="avatar">
+        <div class="ring"></div>
 
-const timerElement = document.getElementById("timer");
+        <div class="logo-inner">
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster=""
+                aria-label="KING MASTER logo video"
+            >
+                <source src="1000604516.mp4" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        </div>
+    </div>
 
-const countdown = setInterval(function () {
-    seconds--;
-    timerElement.textContent = seconds;
+    <h1 class="name">KING MASTER</h1>
 
-    if (seconds <= 0) {
-        clearInterval(countdown);
-        window.location.href = telegramLink;
-    }
-}, 1000);
-</script>
+    <div class="subtitle">
+        WELCOME TO OUR OFFICIAL CHANNEL
+    </div>
+
+    <div class="chart" aria-hidden="true">
+        <div class="candle"></div>
+        <div class="candle"></div>
+        <div class="candle"></div>
+        <div class="candle"></div>
+        <div class="candle"></div>
+        <div class="candle"></div>
+        <div class="candle"></div>
+    </div>
+
+    <div class="features">
+        <div class="feature">👑 KING MASTER</div>
+        <div class="feature">📢 TELEGRAM CHANNEL</div>
+        <div class="feature">🔔 CHANNEL UPDATES</div>
+    </div>
+
+    <a
+        class="cta"
+        href="https://t.me/+jBztwPs2Vz45ZDY9"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <svg
+            class="telegram-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+            <path d="M21.8 3.2a1.5 1.5 0 0 0-1.6-.3L2.8 9.5c-1.2.5-1.2 1.2-.2 1.5l4.5 1.4 1.7 5.3c.2.6.1.8.7.8.5 0 .7-.2.9-.4l2.2-2.2 4.6 3.4c.8.5 1.4.3 1.6-.8l3-14.2c.2-.8-.2-1.3-.8-1.1ZM9.1 12.1l9.2-5.8c.5-.3.9-.1.5.2l-7.6 7-.3 3.2-1.8-4.6Z"/>
+        </svg>
+
+        JOIN TELEGRAM CHANNEL
+    </a>
+
+    <div class="join-text">
+        Tap the button above to <span>JOIN NOW</span>
+    </div>
+
+    <hr class="divider">
+
+    <div class="footer">
+        KING MASTER<br>
+        Visit our official Telegram channel for updates.
+    </div>
+
+</main>
 
 </body>
 </html>

@@ -3,336 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KING MASTER</title>
 <meta name="theme-color" content="#080808">
 <meta name="description" content="KING MASTER Official Telegram Channel">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>KING MASTER</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{min-height:100%}
+body{
+min-height:100vh;display:flex;align-items:center;justify-content:center;
+padding:18px;font-family:Arial,Helvetica,sans-serif;color:#fff;
+background:radial-gradient(ellipse at top,rgba(180,0,0,.20),transparent 65%),#080808
 }
-
-html, body {
-    min-height: 100%;
+.card{
+width:100%;max-width:400px;padding:28px 22px 23px;text-align:center;
+background:linear-gradient(145deg,#210808,#090909);
+border:1px solid rgba(255,55,55,.45);border-radius:25px;
+box-shadow:0 25px 70px rgba(0,0,0,.8),0 0 30px rgba(220,0,0,.12);
+animation:fadeIn .7s ease
 }
-
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 18px;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    background:
-        radial-gradient(ellipse at top, rgba(180,0,0,.20), transparent 65%),
-        #080808;
+@keyframes fadeIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.brand{
+display:inline-block;margin-bottom:15px;padding:7px 16px;color:#ff7777;
+background:rgba(255,30,30,.08);border:1px solid rgba(255,70,70,.35);
+border-radius:30px;font-size:10px;font-weight:800;letter-spacing:2px
 }
-
-.card {
-    width: 100%;
-    max-width: 400px;
-    padding: 27px 22px 23px;
-    text-align: center;
-    background: linear-gradient(145deg, #1b0808, #0c0c0c);
-    border: 1px solid rgba(255,55,55,.45);
-    border-radius: 25px;
-    box-shadow: 0 25px 70px rgba(0,0,0,.8),
-                0 0 30px rgba(220,0,0,.12);
-    animation: fadeIn .7s ease;
+.badge{
+margin-bottom:24px;padding:10px;color:#fff;
+background:linear-gradient(90deg,#350707,#8d1010,#350707);
+border:1px solid rgba(255,100,100,.3);border-radius:12px;
+font-size:11px;font-weight:800;letter-spacing:.6px
 }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(18px); }
-    to { opacity: 1; transform: translateY(0); }
+.avatar{
+width:155px;height:155px;margin:0 auto 24px;padding:5px;
+border-radius:50%;
+background:conic-gradient(#ff2525,#fff,#a00000,#ff5555,#ff2525);
+box-shadow:0 0 25px rgba(255,30,30,.3)
 }
-
-.brand {
-    display: inline-block;
-    margin-bottom: 14px;
-    padding: 7px 16px;
-    color: #ff7777;
-    background: rgba(255,30,30,.08);
-    border: 1px solid rgba(255,70,70,.35);
-    border-radius: 30px;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.avatar img{
+display:block;width:100%;height:100%;object-fit:cover;
+object-position:center;border:4px solid #100606;
+border-radius:50%;background:#000
 }
-
-.badge {
-    margin-bottom: 23px;
-    padding: 10px;
-    color: #fff;
-    background: linear-gradient(90deg,#350707,#8d1010,#350707);
-    border: 1px solid rgba(255,100,100,.3);
-    border-radius: 12px;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: .6px;
+h1{
+margin-bottom:9px;color:#fff;font-size:30px;line-height:1.2;
+font-weight:800;letter-spacing:1px;
+text-shadow:0 0 20px rgba(255,30,30,.35)
 }
-
-.avatar {
-    position: relative;
-    width: 155px;
-    height: 155px;
-    margin: 0 auto 23px;
+.subtitle{
+margin-bottom:23px;color:#ff6464;font-size:10px;
+font-weight:800;letter-spacing:1.2px
 }
-
-.ring {
-    position: absolute;
-    inset: -5px;
-    border-radius: 50%;
-    background: conic-gradient(
-        #ff2525,
-        #ffffff,
-        #a00000,
-        #ff5555,
-        #ff2525
-    );
-    animation: spin 6s linear infinite;
-    box-shadow: 0 0 25px rgba(255,30,30,.3);
+.chart{
+height:42px;display:flex;align-items:flex-end;
+justify-content:center;gap:6px;margin-bottom:23px
 }
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
+.candle{
+width:9px;border-radius:2px;
+background:linear-gradient(to top,#a00000,#ff6464);
+animation:candleMove 1.5s ease-in-out infinite
 }
-
-.logo-inner {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    overflow: hidden;
-    border: 4px solid #100606;
-    border-radius: 50%;
-    background: #000;
+.candle:nth-child(1){height:18px}
+.candle:nth-child(2){height:30px;animation-delay:.1s}
+.candle:nth-child(3){height:23px;animation-delay:.2s}
+.candle:nth-child(4){height:38px;animation-delay:.3s}
+.candle:nth-child(5){height:27px;animation-delay:.4s}
+.candle:nth-child(6){height:34px;animation-delay:.5s}
+.candle:nth-child(7){height:41px;animation-delay:.6s}
+@keyframes candleMove{
+0%,100%{transform:scaleY(1)}
+50%{transform:scaleY(.75)}
 }
-
-.logo-inner img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
+.features{
+display:flex;flex-wrap:wrap;justify-content:center;
+gap:8px;margin-bottom:23px
 }
-
-.name {
-    margin-bottom: 9px;
-    color: #fff;
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-shadow: 0 0 20px rgba(255,30,30,.35);
+.feature{
+padding:8px 10px;color:#ffc5c5;background:rgba(255,40,40,.07);
+border:1px solid rgba(255,80,80,.3);border-radius:9px;
+font-size:9px;font-weight:700
 }
-
-.subtitle {
-    margin-bottom: 21px;
-    color: #ff6464;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.2px;
+.join{
+display:flex;align-items:center;justify-content:center;gap:9px;
+width:100%;padding:16px 12px;border:0;border-radius:50px;
+background:linear-gradient(135deg,#ff3535,#cf0000,#850000);
+color:#fff;text-decoration:none;font-size:13px;font-weight:800;
+box-shadow:0 5px 25px rgba(255,20,20,.3);
+transition:transform .2s ease,box-shadow .2s ease;
+animation:pulse 2.2s ease-in-out infinite
 }
-
-.chart {
-    height: 42px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 6px;
-    margin-bottom: 22px;
+.join:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 30px rgba(255,20,20,.45)
 }
-
-.candle {
-    width: 9px;
-    border-radius: 2px;
-    background: linear-gradient(to top,#a00000,#ff6464);
-    animation: candleMove 1.5s ease-in-out infinite;
+.telegram-icon{width:21px;height:21px;fill:currentColor;flex-shrink:0}
+@keyframes pulse{
+0%,100%{box-shadow:0 5px 20px rgba(255,20,20,.22)}
+50%{box-shadow:0 7px 30px rgba(255,20,20,.45)}
 }
-
-.candle:nth-child(1) { height: 18px; }
-.candle:nth-child(2) { height: 30px; animation-delay: .1s; }
-.candle:nth-child(3) { height: 23px; animation-delay: .2s; }
-.candle:nth-child(4) { height: 38px; animation-delay: .3s; }
-.candle:nth-child(5) { height: 27px; animation-delay: .4s; }
-.candle:nth-child(6) { height: 34px; animation-delay: .5s; }
-.candle:nth-child(7) { height: 41px; animation-delay: .6s; }
-
-@keyframes candleMove {
-    0%,100% { transform: scaleY(1); }
-    50% { transform: scaleY(.75); }
+.note{margin-top:13px;color:rgba(255,255,255,.55);font-size:10px}
+.note span{color:#ff6464;font-weight:800}
+hr{margin:21px 0 14px;border:0;border-top:1px solid rgba(255,70,70,.2)}
+.footer{color:rgba(255,255,255,.4);font-size:9px;line-height:1.7}
+@media(max-width:360px){
+.card{padding:23px 17px}
+.avatar{width:135px;height:135px}
+h1{font-size:25px}
 }
-
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 23px;
-}
-
-.feature {
-    padding: 8px 11px;
-    color: #ffc5c5;
-    background: rgba(255,40,40,.07);
-    border: 1px solid rgba(255,80,80,.3);
-    border-radius: 10px;
-    font-size: 9px;
-    font-weight: 700;
-}
-
-.cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    padding: 16px 18px;
-    border: 0;
-    border-radius: 50px;
-    background: linear-gradient(135deg,#ff3535,#cf0000,#850000);
-    color: #fff;
-    font-family: 'Poppins',sans-serif;
-    font-size: 13px;
-    font-weight: 800;
-    text-decoration: none;
-    box-shadow: 0 5px 25px rgba(255,20,20,.3);
-    transition: .2s ease;
-    animation: pulse 2.2s ease-in-out infinite;
-}
-
-.cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(255,20,20,.45);
-}
-
-.telegram-icon {
-    width: 21px;
-    height: 21px;
-    fill: currentColor;
-    flex-shrink: 0;
-}
-
-@keyframes pulse {
-    0%,100% { box-shadow: 0 5px 20px rgba(255,20,20,.22); }
-    50% { box-shadow: 0 7px 30px rgba(255,20,20,.45); }
-}
-
-.join-text {
-    margin-top: 13px;
-    color: rgba(255,255,255,.55);
-    font-size: 10px;
-}
-
-.join-text span {
-    color: #ff6464;
-    font-weight: 800;
-}
-
-.divider {
-    margin: 20px 0 13px;
-    border: 0;
-    border-top: 1px solid rgba(255,70,70,.2);
-}
-
-.footer {
-    color: rgba(255,255,255,.4);
-    font-size: 9px;
-    line-height: 1.7;
-}
-
-@media(max-width:360px) {
-    .card { padding: 23px 17px; }
-    .name { font-size: 25px; }
-    .avatar { width: 135px; height: 135px; }
-}
-
-@media(prefers-reduced-motion:reduce) {
-    *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-    }
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation:none!important;transition:none!important}
 }
 </style>
 </head>
 
 <body>
-
 <main class="card">
 
-    <div class="brand">KING MASTER</div>
+<div class="brand">KING MASTER</div>
 
-    <div class="badge">
-        👑 KING MASTER • OFFICIAL CHANNEL
-    </div>
+<div class="badge">👑 KING MASTER • OFFICIAL CHANNEL</div>
 
-    <div class="avatar">
-        <div class="ring"></div>
+<div class="avatar">
+<img
+src="data:image/jpeg;base64,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"
+alt="KING MASTER Logo"
+width="145"
+height="145">
+</div>
 
-        <div class="logo-inner">
-            <img
-                src="king-master-logo.jpg"
-                alt="KING MASTER Logo"
-                width="145"
-                height="145"
-            >
-        </div>
-    </div>
+<h1>KING MASTER</h1>
+<div class="subtitle">WELCOME TO OUR OFFICIAL CHANNEL</div>
 
-    <h1 class="name">KING MASTER</h1>
+<div class="chart" aria-hidden="true">
+<div class="candle"></div>
+<div class="candle"></div>
+<div class="candle"></div>
+<div class="candle"></div>
+<div class="candle"></div>
+<div class="candle"></div>
+<div class="candle"></div>
+</div>
 
-    <div class="subtitle">
-        WELCOME TO OUR OFFICIAL CHANNEL
-    </div>
+<div class="features">
+<div class="feature">👑 KING MASTER</div>
+<div class="feature">📢 TELEGRAM CHANNEL</div>
+<div class="feature">🔔 CHANNEL UPDATES</div>
+</div>
 
-    <div class="chart" aria-hidden="true">
-        <div class="candle"></div>
-        <div class="candle"></div>
-        <div class="candle"></div>
-        <div class="candle"></div>
-        <div class="candle"></div>
-        <div class="candle"></div>
-        <div class="candle"></div>
-    </div>
+<a class="join"
+href="https://t.me/+jBztwPs2Vz45ZDY9"
+target="_blank"
+rel="noopener noreferrer">
+<svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M21.8 3.2a1.5 1.5 0 0 0-1.6-.3L2.8 9.5c-1.2.5-1.2 1.2-.2 1.5l4.5 1.4 1.7 5.3c.2.6.1.8.7.8.5 0 .7-.2.9-.4l2.2-2.2 4.6 3.4c.8.5 1.4.3 1.6-.8l3-14.2c.2-.8-.2-1.3-.8-1.1ZM9.1 12.1l9.2-5.8c.5-.3.9-.1.5.2l-7.6 7-.3 3.2-1.8-4.6Z"/>
+</svg>
+JOIN TELEGRAM CHANNEL
+</a>
 
-    <div class="features">
-        <div class="feature">👑 KING MASTER</div>
-        <div class="feature">📢 TELEGRAM CHANNEL</div>
-        <div class="feature">🔔 CHANNEL UPDATES</div>
-    </div>
+<div class="note">Tap the button above to <span>JOIN NOW</span></div>
 
-    <a
-        class="cta"
-        href="https://t.me/+jBztwPs2Vz45ZDY9"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21.8 3.2a1.5 1.5 0 0 0-1.6-.3L2.8 9.5c-1.2.5-1.2 1.2-.2 1.5l4.5 1.4 1.7 5.3c.2.6.1.8.7.8.5 0 .7-.2.9-.4l2.2-2.2 4.6 3.4c.8.5 1.4.3 1.6-.8l3-14.2c.2-.8-.2-1.3-.8-1.1ZM9.1 12.1l9.2-5.8c.5-.3.9-.1.5.2l-7.6 7-.3 3.2-1.8-4.6Z"/>
-        </svg>
-        JOIN TELEGRAM CHANNEL
-    </a>
+<hr>
 
-    <div class="join-text">
-        Tap the button above to <span>JOIN NOW</span>
-    </div>
-
-    <hr class="divider">
-
-    <div class="footer">
-        KING MASTER<br>
-        Visit our official Telegram channel for updates.
-    </div>
+<div class="footer">
+KING MASTER<br>
+Visit our Telegram channel for updates.
+</div>
 
 </main>
-
 </body>
 </html>
